@@ -21,15 +21,16 @@ public class DuellCommand implements CommandExecutor {
                 if (args[0].equalsIgnoreCase("request")) {
                     if (args.length >= 2) {
                         Player requested = Bukkit.getPlayer(args[1]);
-                        duellManager.requestDuell(player, requested);
+                        if (requested != player)
+                            duellManager.requestDuell(player, requested);
                     }
                 } else if (args[0].equalsIgnoreCase("accept")) {
                     if (duellManager.requestPlayer.containsKey(player)) {
                         Player requester = duellManager.requestPlayer.get(player);
                         duellManager.joinDuell(requester, player);
-                        requester.sendMessage("[§cDuellSystem§7] " + player.getName() + " hat deine Anfrage angenommen.");
+                        requester.sendMessage("§7[§cDuellSystem§7] " + player.getName() + " hat deine Anfrage angenommen.");
                     }  else {
-                        player.sendMessage("[§cDuellSystem§7] Du hast keine Anfrage bekommen.");
+                        player.sendMessage("§7[§cDuellSystem§7] Du hast keine Anfrage bekommen.");
                     }
                 }
             }

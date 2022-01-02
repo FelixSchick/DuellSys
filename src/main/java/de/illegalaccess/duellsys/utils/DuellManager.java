@@ -56,18 +56,18 @@ public class DuellManager {
                     int countRequester = duellcounter.get(requester);
                     int countRequested = duellcounter.get(requested);
                     if (countRequester > countRequested) {
-                        requester.sendMessage("[§cDuellSystem§7] §eDu hast gewonnen. " + "§2" +countRequester + "§7:§c" + countRequested);
-                        requested.sendMessage("[§cDuellSystem§7] §eDu hast verloren. " + "§c" +countRequested + "§7:§2" + countRequester);
+                        requester.sendMessage("§7[§cDuellSystem§7] §eDu hast gewonnen. " + "§2" +countRequester + "§7:§c" + countRequested);
+                        requested.sendMessage("§7[§cDuellSystem§7] §eDu hast verloren. " + "§c" +countRequested + "§7:§2" + countRequester);
                     } else if (countRequested < countRequester) {
-                        requested.sendMessage("[§cDuellSystem§7] §eDu hast gewonnen. "+ "§2" +countRequested + "§7:§c" + countRequester);
-                        requester.sendMessage("[§cDuellSystem§7] §eDu hast verloren."+ "§c" +countRequester + "§7:§2" + countRequested);
+                        requested.sendMessage("§7[§cDuellSystem§7] §eDu hast gewonnen. "+ "§2" +countRequested + "§7:§c" + countRequester);
+                        requester.sendMessage("§7[§cDuellSystem§7] §eDu hast verloren."+ "§c" +countRequester + "§7:§2" + countRequested);
                     } else if (countRequested == countRequester) {
-                        requested.sendMessage("[§cDuellSystem§7] §eGleichstand keiner hat gewonnen."+ "§2" +countRequested + "§7:§c" + countRequester);
-                        requester.sendMessage("[§cDuellSystem§7] §eGleichstand keiner hat gewonnen."+ "§2" +countRequester + "§7:§c" + countRequester);
+                        requested.sendMessage("§7[§cDuellSystem§7] §eGleichstand keiner hat gewonnen."+ "§2" +countRequested + "§7:§c" + countRequester);
+                        requester.sendMessage("§7[§cDuellSystem§7] §eGleichstand keiner hat gewonnen."+ "§2" +countRequester + "§7:§c" + countRequester);
                     }
                 } else {
-                    requested.sendMessage("[§cDuellSystem§7] §eDu oder dein Mitspieler waren afk.");
-                    requester.sendMessage("[§cDuellSystem§7] §eDu oder dein Mitspieler waren afk.");
+                    requested.sendMessage("§7[§cDuellSystem§7] §eDu oder dein Mitspieler waren afk.");
+                    requester.sendMessage("§7[§cDuellSystem§7] §eDu oder dein Mitspieler waren afk.");
                 }
                 duellcounter.remove(requested);
                 duellcounter.remove(requester);
