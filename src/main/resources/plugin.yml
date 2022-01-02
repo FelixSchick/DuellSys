@@ -1,0 +1,6 @@
+name: DuellSys
+version: ${project.version}
+main: de.illegalaccess.duellsys.DuellSys
+api-version: 1.17
+commands:
+  duell:
