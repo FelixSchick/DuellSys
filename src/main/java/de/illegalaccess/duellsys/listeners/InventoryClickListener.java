@@ -9,8 +9,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class InventoryClickListener implements Listener {
-    DuellManager duellManager;
-    DuellInventory duellInventory;
+    private DuellManager duellManager;
+    private DuellInventory duellInventory;
     public InventoryClickListener(DuellManager getDuellManager, DuellInventory getDuellInventory) {
         duellManager = getDuellManager;
         duellInventory = getDuellInventory;

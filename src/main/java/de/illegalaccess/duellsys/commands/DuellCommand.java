@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class DuellCommand implements CommandExecutor {
-    DuellManager duellManager;
+    private DuellManager duellManager;
     public DuellCommand(DuellManager getDuellManager) {
         duellManager = getDuellManager;
     }

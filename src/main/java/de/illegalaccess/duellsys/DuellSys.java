@@ -12,16 +12,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class DuellSys extends JavaPlugin {
     public static Plugin plugin;
 
-    DuellManager duellManager;
-    DuellInventory duellInventory;
-    DuellCommand duellCommand;
+    private DuellManager duellManager;
+    private DuellInventory duellInventory;
+    private DuellCommand duellCommand;
     @Override
     public void onEnable() {
         // Plugin startup logic
         plugin = this;
-        duellInventory = new DuellInventory();
-        duellManager = new DuellManager(duellInventory);
-        duellCommand = new DuellCommand(duellManager);
+        this.duellInventory = new DuellInventory();
+        this.duellManager = new DuellManager(this.duellInventory);
+        this.duellCommand = new DuellCommand(this.duellManager);
 
         Bukkit.getPluginManager().registerEvents(new InventoryClickListener(duellManager, duellInventory), this);
 

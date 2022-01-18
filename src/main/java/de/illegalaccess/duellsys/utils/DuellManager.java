@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DuellManager {
-    DuellInventory duellInventory;
+    private DuellInventory duellInventory;
     public DuellManager(DuellInventory getDuellInventory) {
         duellInventory = getDuellInventory;
     }
